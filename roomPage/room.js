@@ -3,7 +3,7 @@ const queryStr=new URLSearchParams(window.location.search);// giving the query s
 const roomname=queryStr.get('roomname');
 const username=queryStr.get('username');
 const name1=queryStr.get('name');
-const baseUrl='http://127.0.0.1:8000';
+const baseUrl='https://discordbackedrender.onrender.com';
 
 const inputBox=document.getElementById('inputBox');
 const sendBtn=document.getElementById('send');

@@ -1,4 +1,4 @@
-const baseUrl='http://127.0.0.1:8000';
+const baseUrl='https://discordbackedrender.onrender.com';
 const authors=document.getElementById('authors');
 const queryStr=new URLSearchParams(window.location.search);// giving the query string
 const username=queryStr.get('username');

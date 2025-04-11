@@ -1,5 +1,5 @@
 const submit_btn=document.getElementById('submit_div');
-const baseUrl='http://127.0.0.1:8000';
+const baseUrl='https://discordbackedrender.onrender.com';
 
 submit_btn.addEventListener('click',async ()=>{
     const username=document.getElementById('username').value;
