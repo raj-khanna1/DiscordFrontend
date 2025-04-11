@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="main_body">
+        <button id="signupBtn">Signup</button>
+        <img src="pic.png" alt="no image found" id="backimg">
+        <div id="login_div">
+            <div id="username_div">
+                <h2>Username: </h2> 
+            <input type="text" id="username" placeholder="Enter Your Username">
+            </div>
+            <div id="password_div">
+                <h2>Password: </h2> 
+            <input type="text" id="password" placeholder="Enter Your Password">
+            </div>
+            <div id="submit_div">
+                <h2>SUBMIT</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal / Popup -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <h2>Sign Up ,After Signup do Login! </h2>
+      <input type="text" id="username2" placeholder="Username Must be Unique" />
+      <input type="password" id="password2" placeholder="Password" />
+      <input type="text" id="name" placeholder="Enter Your Normal Name" />
+      <button onclick="submitUser()">Submit</button>
+    </div>
+  </div>
+
+</body>
+<script src="login.js"></script>
+</html>

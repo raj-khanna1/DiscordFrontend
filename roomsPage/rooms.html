@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rooms.css">
+</head>
+<body>
+    <div id="mainDiv">
+        <div class="navbar">
+            <div class="navbar-center">Your Connected Rooms</div>
+            <div class="navbar-right">
+              <button id="joinBtn">Join Room</button>
+              <button id="signupBtn">Create Room</button>
+            </div>
+          </div>
+        <div id="authorsBody">
+          <div id="room-container"></div>
+            </div>
+        </div>
+    </div>
+
+    
+  <!-- Modal / Popup -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <h2>Create New Room</h2>
+      <input type="text" id="roomName" placeholder="Room Name" />
+      <input type="password" id="roomPassword" placeholder="Room Password" />
+      <input type="text" id="roomKaNaam" placeholder="Any Name Of Your Room" />
+
+      <button onclick="submitRoom()">Submit</button>
+    </div>
+  </div>
+  <!-- Modal / Popup -->
+  <div class="modal" id="joinModal">
+    <div class="modal-content">
+      <h2>Join New Room</h2>
+      <input type="text" id="roomName2" placeholder="unique roomname" />
+      <input type="password" id="roomPassword2" placeholder="Room Password" />
+      <button onclick="joinRoom()">Submit</button>
+    </div>
+  </div>
+</body>
+<script src="rooms.js"></script>
+</html>
