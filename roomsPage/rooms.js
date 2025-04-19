@@ -119,6 +119,9 @@ fetch(`${baseUrl}/api/v1/authUser`, {
           alert("Room Created");
           createRoomTile(value.data.name);
          }
+         else {
+          alert(value.message);
+         }
       })
       .catch(error => {
         console.error("error can't create rom", error);
@@ -159,7 +162,7 @@ function joinRoom() {
       createRoomTile(roomName);
      }
      else {
-      alert("Can't Join Room Incorrect Credentials");
+      alert(value.message);
      }
   })
   .catch(error => {
