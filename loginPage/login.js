@@ -76,14 +76,14 @@ const signupBtn = document.getElementById('signupBtn');
         })
         .then((value)=>{
            if(value.success){
-                console.log("User Created ,PLZ LOGIN");
+                alert("User Created ,PLZ LOGIN");
            }
            else {
-            console.log(value.message);
+            alert(value.message);
            }
         })
         .catch(error => {
-          console.error("error can't create rom", error);
+          alert("error can't create room "+ error);
       });
       
         modal.style.display = 'none';

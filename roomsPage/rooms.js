@@ -40,12 +40,12 @@ fetch(`${baseUrl}/api/v1/authUser`, {
   })
   .then(response => response.json()) 
   .then(responseData => { 
-      console.log("API Response:", responseData);
+      // console.log("API Response:", responseData);
 
       const rooms = responseData.data.rooms;
-      console.log("data= ",responseData);
-      console.log("data2= ",responseData.data);
-      console.log("data= ",responseData.data.rooms);
+      // console.log("data= ",responseData);
+      // console.log("data2= ",responseData.data);
+      // console.log("data= ",responseData.data.rooms);
       if (!rooms || rooms.length === 0 ) {
           document.getElementById("backimg").src = "default.jpg"; 
       } else {
@@ -121,6 +121,7 @@ fetch(`${baseUrl}/api/v1/authUser`, {
       })
       .catch(error => {
         console.error("error can't create rom", error);
+        alert("error can't create room chk console");
     });
     
       modal.style.display = 'none';
@@ -152,12 +153,12 @@ function joinRoom() {
   })
   .then((value)=>{
      if(value.success){
-      console.log("Room Joined");
-      console.log("value while room= ",value);
+      alert("Room Joined");
+      // console.log("value while room= ",value);
       createRoomTile(roomName);
      }
      else {
-      console.log(value.message);
+      alert(value.message);
      }
   })
   .catch(error => {

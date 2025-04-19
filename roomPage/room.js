@@ -113,7 +113,7 @@ const response=fetch(`${baseUrl}/api/v1/getMsg`,{
         
         console.log("roomname= ",roomname);
         console.log("username= ",username);
-        console.log("value= ",value);
+        // console.log("value= ",value);
         // now traversing the array
         for(let i=0;i<value.data.length;i++){
             let cUserId=value.data[i].sender;// cuser= crnt user
@@ -121,14 +121,15 @@ const response=fetch(`${baseUrl}/api/v1/getMsg`,{
             let cname=await fetchUsername(cUserId);
             let cMsg=value.data[i].message;
             let cUt=value.data[i].updatedAt;
-            console.log("timre= ",cUt);
+            // console.log("timre= ",cUt);
             createMessageBubble(cname,cMsg,cUt);
         }
 
     }
   })
   .catch(error => {
-    console.error("Msg Can't be fetched due to some problem bhaiya", error);
+    alert("Msg Can't be fetched due to some problem bhaiya");
+    console.log("error = ",error);
   });
 
 
@@ -175,6 +176,7 @@ sendBtn.addEventListener('click',()=>{
             }
           })
           .catch(error => {
+            alert("Msg Can't be Created bhaiya chk console");
             console.error("Msg Can't be Created bhaiya", error);
           });
         
