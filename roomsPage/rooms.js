@@ -116,6 +116,7 @@ fetch(`${baseUrl}/api/v1/authUser`, {
       .then((value)=>{
          if(value.success){
           console.log("kya re Duniya hila di tune to BOSS!");
+          alert("Room Created");
           createRoomTile(value.data.name);
          }
       })
