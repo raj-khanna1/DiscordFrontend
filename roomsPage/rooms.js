@@ -115,7 +115,7 @@ fetch(`${baseUrl}/api/v1/authUser`, {
       })
       .then((value)=>{
          if(value.success){
-          console.log("kya re Duniya hila di tune to BOSS!");
+          // console.log("kya re Duniya hila di tune to BOSS!");
           alert("Room Created");
           createRoomTile(value.data.name);
          }
@@ -133,7 +133,7 @@ function joinRoom() {
   const roomName = document.getElementById('roomName2').value;
   const roomPassword = document.getElementById('roomPassword2').value;
 
-  console.log('Room Created:', roomName, roomPassword);
+  // console.log('Room Created:', roomName, roomPassword);
 
   // sending the request to the backend
   const response=fetch(`${baseUrl}/api/v1/updateUserRoom`,{
@@ -159,11 +159,11 @@ function joinRoom() {
       createRoomTile(roomName);
      }
      else {
-      alert(value.message);
+      alert("Can't Join Room Incorrect Credentials");
      }
   })
   .catch(error => {
-    console.error("error can't create rom", error);
+    console.error("Error can't Join rom", error);
 });
 
   modal.style.display = 'none';
